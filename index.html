@@ -3,62 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بدرقه - شعر و دکلمه</title>
+    <title>بدرقه - شعر سپید</title>
+    <!-- استفاده از فونت مدرن و خوانای وزیرمتن -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <style>
         body {
-            font-family: Tahoma, sans-serif;
-            background-color: #f4f6f9;
-            color: #2c3e50;
-            max-width: 700px;
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #faf9f6; /* رنگ پس‌زمینه کاغذی ملایم */
+            color: #2b2b2b;
+            max-width: 650px;
             margin: 0 auto;
-            padding: 40px 20px;
-            line-height: 2.2;
-            text-align: center;
+            padding: 50px 20px;
+            line-height: 2.6;
         }
-        .poem-container {
+        .poem-card {
             background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            text-align: center;
+            padding: 50px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
         }
         h1 {
-            color: #1a252f;
+            font-size: 26px;
+            font-weight: 700;
+            color: #1a1a1a;
             margin-bottom: 5px;
+            text-align: center;
         }
-        .poet-name {
-            color: #7f8c8d;
+        .poet-meta {
             font-size: 14px;
-            margin-bottom: 30px;
+            color: #888888;
+            text-align: center;
+            margin-bottom: 35px;
         }
-        .poem-text {
-            white-space: pre-line;
+        .poem-body {
+            white-space: pre-line; /* حفظ دقیق اینترها و فاصله‌های شعر سپید */
             font-size: 18px;
-            line-height: 2.5;
-            color: #34495e;
-            margin-bottom: 40px;
-            display: inline-block;
+            color: #333333;
+            margin-bottom: 45px;
             text-align: right;
         }
-        .audio-box {
-            background: #ecf0f1;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
+        .audio-section {
+            border-top: 1px solid #eee;
+            padding-top: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .audio-section p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 12px;
         }
         audio {
             width: 100%;
-            margin-top: 10px;
+            max-width: 400px;
+        }
+        .footer-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 20px;
+            font-size: 13px;
+            color: #777;
+        }
+        .share-btn {
+            background-color: #f4f6f9;
+            color: #34495e;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-family: 'Vazirmatn', sans-serif;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .share-btn:hover {
+            background-color: #e2e8f0;
         }
     </style>
 </head>
 <body>
 
-    <div class="poem-container">
+    <div class="poem-card">
         <h1>بدرقه</h1>
-        <div class="poet-name">محمد سالاری</div>
+        <div class="poet-meta">
+            <span>محمد سالاری</span> &nbsp;|&nbsp; <span>تاریخ سرایش: مهر ۱۴۰۵</span>
+        </div>
 
-        <div class="poem-text">
+        <!-- متن شعر سپید -->
+        <div class="poem-body">
 این راه بدرقه شده را
 درین شب تابستانی
 دوباره
@@ -101,14 +134,23 @@
  لمیده درمیان اتاق
 این استکان خالی
 چقدر سنگین است
+
+صبح بعد از تو دلگیر است
         </div>
 
-        <div class="audio-box">
-            <p>🎧 <strong>شنیدن دکلمه شعر با موسیقی:</strong></p>
+        <!-- بخش دکلمه و صوت -->
+        <div class="audio-section">
+            <p>🎧 <strong>شنیدن دکلمه شعر با صدای شاعر:</strong></p>
             <audio controls>
                 <source src="dialogue.mp3" type="audio/mp3">
                 مرورگر شما از پخش صوت پشتیبانی نمی‌کند.
             </audio>
+        </div>
+
+        <!-- بخش پایین صفحه: وضعیت انتشار و دکمه اشتراک‌گذاری -->
+        <div class="footer-actions">
+            <span>وضعیت: منتشر شده در سایت شخصی</span>
+            <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('لینک شعر کپی شد!');">اشتراک‌گذاری شعر</button>
         </div>
     </div>
 
