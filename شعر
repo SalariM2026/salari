@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت شعر و دکلمه من</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.8;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .poem-box {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: right;
+        }
+        audio, video {
+            width: 100%;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>مجموعه شعر و دکلمه‌های من</h1>
+    <p>به دنیای واژه‌ها و صدای من خوش آمدید.</p>
+
+    <div class="poem-box">
+        <h2>عنوان شعر اول</h2>
+        <p>
+            اینجا متن شعر شما قرار می‌گیرد...<br>
+            بند اول شعر یا نوشته شما.<br>
+            بند دوم شعر یا نوشته شما.
+        </p>
+        
+        <!-- اگر دکلمه صوتی دارید، لینک فایل صوتی را اینجا بگذارید -->
+        <p><strong>دکلمه این شعر:</strong></p>
+        <audio controls>
+            <source src="آدرس_فایل_صوتی_شما.mp3" type="audio/mp3">
+            مرورگر شما از صوت پشتیبانی نمی‌کند.
+        </audio>
+    </div>
+
+</body>
+</html>
